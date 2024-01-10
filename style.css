@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;300;400;500;600;700&display=swap');
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font: inherit;
+}
+
+a {
+      text-decoration: none;
+}
+
+html, body {
+      height: 100%;
+}
+
+img, svg {
+      display: block;
+      max-width: 100%;
+}
+
+:root {
+      --clr-blue: hsl(223, 87%, 63%);
+      --clr-pale-blue: hsl(223, 100%, 88%);
+      --clr-light-red: hsl(354, 100%, 66%);
+      --clr-gray: hsl(0, 0%, 59%);
+      --clr-dark-blue: hsl(209, 33%, 12%);
+
+      --fw-thin: 200;
+      --fw-light: 300;
+      --fw-regular: 400;
+      --fw-light-bold: 500;
+      --fw-bold: 600;
+      --fw-extra-bold: 700;
+
+      --fs-200: .625rem;
+      --fs-300: .8rem;
+      --fs-400: 1rem;
+      --fs-500: 1.2rem;
+      --fs-600: 1.3rem;
+      --fs-700: 2.85rem;
+}
+
+body {
+      display: grid;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: var(--fs-300);
+      font-weight: var(--fw-light)
+}
+
+.grid-flow {
+      display: grid;
+      gap: 1rem;
+}
+
+.coming-soon-page {
+      display: grid;
+      gap: 2.25rem;
+      place-content: start;
+      padding: 5rem 7% 2.25rem 7%;
+}
+
+header {
+      gap: 2rem;
+      padding: 0 5%;
+      text-align: center;
+}
+.page-logo {
+      width: 3.5rem;
+      margin: 0 auto 1.5rem auto;
+}
+
+.title {
+      font-size: var(--fs-600);
+      color: var(--clr-gray);
+}
+
+.title span {
+      color: var(--clr-dark-blue);
+      font-weight: var(--fw-extra-bold);
+}
+
+.subtitle {
+      font-weight: var(--fw-regular);
+}
+
+.form-field {
+      margin-top: 1rem;
+      gap: .5rem;
+}
+
+.form-container {
+      display: grid;
+      height: 5rem;
+      align-items: start;
+      gap: 1.85rem;
+}
+
+.form-input {
+      padding: .7rem 2rem;
+      border: 1px solid var(--clr-pale-blue);
+      outline: none;
+      border-radius: 30px;
+}
+
+.form-input::placeholder {
+      color: var(--clr-pale-blue);
+}
+
+.error-text {
+      color: var(--clr-light-red);
+      font-size: var(--fs-200);
+      font-style: italic;
+      font-weight: var(--fw-light-bold);
+}
+
+.submit-btn {
+      color: white;
+      font-weight: var(--fw-light-bold);
+      padding: .7rem 0;
+      border: none;
+      border-radius: 30px;
+      background-color: var(--clr-blue);
+      box-shadow: 0 5px 8px hsla(223, 100%, 88%, .7);
+}
+
+footer {
+      display: grid;
+      place-content: center;
+      gap: 1.25rem;
+      margin-top: 5rem;
+}
+
+.social-icon {
+      display: flex;
+      justify-content: center;
+      gap: .7rem;
+}
+
+.social-icon .icon {
+      display: grid;
+      place-content: center;
+      width: 2rem;
+      height: 2rem;
+      border: .5px solid var(--clr-pale-blue);
+      border-radius: 50%;
+      color: var(--clr-blue);
+      font-size: 1rem;
+}
+
+.copyright {
+      font-size: var(--fs-200);
+      color: var(--clr-gray);
+}
+
+@media (min-width: 770px) {
+
+      body {
+            font-size: var(--fs-400);
+            align-items: center;
+      }
+      .coming-soon-page {
+            width: 50rem;
+            gap: 6rem;
+            padding: 0;
+            margin: 5rem auto 0 auto;
+      } 
+
+      header {
+            padding: 0;
+      }
+
+      .page-logo {
+            width: 5.5rem;
+      }
+
+      .title {
+            font-size: var(--fs-700);
+      }
+
+      .subtitle {
+            font-size: var(--fs-500);
+      }
+
+      .form-field {
+            grid-template-columns: 2fr 1fr;
+            position: relative;
+            gap: 1rem;
+      }
+
+      .form-input {
+            padding: 1.25rem 2rem;
+            font-weight: var(--fw-regular);
+      }
+
+      .form-container {
+            height: auto;
+      }
+
+      .error-text {
+            position: absolute;
+            left: 2rem;
+            bottom: -1.2rem;
+            font-size: var(--fs-300);
+      }
+
+      .submit-btn {
+            padding: 1.25rem 0;
+            transition: background-color 0.1s;
+      }
+
+      .submit-btn:active {
+            background-color: var(--clr-pale-blue);
+      }
+
+      footer {
+            margin: 0 0 3rem 0;
+      }
+
+      .icon:hover {
+            color: white;
+            background-color: var(--clr-blue);
+            border-color: var(--clr-blue);
+      }
+      
+      .copyright {
+            font-size: var(--fs-300);
+      }
+}
+
+.form-input.error {
+      border: 1px solid var(--clr-light-red);
+}
+
+
+
+
